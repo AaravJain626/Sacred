@@ -1,6 +1,6 @@
 import pygame as pg
 import sys
-import math  # Explicitly importing math for pi
+import math  
 from object_3d import *
 from camera import *
 from projection import *
@@ -14,7 +14,7 @@ class SoftwareRender:
         self.FPS = 60
         self.screen = pg.display.set_mode(self.RES)
         self.clock = pg.time.Clock()
-        self.create_objects()  # FIXED: Added () to actually invoke the method
+        self.create_objects()  
 
     def create_objects(self):
         self.camera = Camera(self, [0.5, 1, -4])
@@ -24,14 +24,14 @@ class SoftwareRender:
         self.object.rotate_y(math.pi / 6)
 
     def draw(self):
-        self.screen.fill(pg.Color('darkgray'))  # Using darkgray for better wireframe contrast
+        self.screen.fill(pg.Color('darkgray'))  
         self.object.draw()
 
     def run(self):
         while True:
             self.draw()
             
-            # Clean exit handling instead of list comprehension side-effects
+          s
             for event in pg.event.get():
                 if event.type == pg.QUIT:
                     pg.quit()
