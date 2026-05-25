@@ -1,5 +1,7 @@
 import math
 import numpy as np 
+import pygame as pg
+
 
 def translate(pos):
     tx, ty, tz = pos
